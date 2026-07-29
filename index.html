@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess My Doodle – Privacy Policy</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --surface: #fff7f0;
+      --border: #f0d9c4;
+      --text: #1c1208;
+      --text-muted: #8a6a48;
+      --accent: #c2500a;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1a0f06;
+        --surface: #2a1a0d;
+        --border: #3d2510;
+        --text: #fbf0e6;
+        --text-muted: #a07850;
+        --accent: #f97316;
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+      padding: 2rem 1rem;
+    }
+
+    .container { max-width: 680px; margin: 0 auto; }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .app-name {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    h1 { font-size: 1.75rem; font-weight: 800; letter-spacing: -.5px; line-height: 1.2; margin-bottom: 6px; }
+
+    .meta { font-size: 13px; color: var(--text-muted); }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 2rem 0 .5rem;
+      color: var(--text);
+    }
+
+    p { margin-bottom: 1rem; color: var(--text-muted); font-size: 15px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      margin: .5rem 0 1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+    li { margin-bottom: .3rem; }
+
+    .highlight {
+      background: var(--surface);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: .75rem 1rem;
+      margin: 1rem 0;
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="app-name">Guess My Doodle: Draw &amp; Guess</div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective date: 29 July 2026 &nbsp;·&nbsp; Package: com.tripex.guessmydoodle</p>
+  </header>
+
+  <div class="highlight">
+    The short version: Guess My Doodle does not collect your name, email, phone number, or any other personal information. No account is required to play.
+  </div>
+
+  <h2>1. What We Collect</h2>
+  <p>Guess My Doodle is designed to work without identifying you. The only data the app stores are:</p>
+  <ul>
+    <li><strong>Drawing strokes</strong> — the vector paths you draw on the canvas, stored as normalised coordinates (numbers between 0 and 1). These contain no information about who drew them.</li>
+    <li><strong>Word labels</strong> — the word associated with each drawing.</li>
+    <li><strong>Local game stats</strong> — your XP, level, streak, and guess accuracy, stored on your device only via Android SharedPreferences.</li>
+    <li><strong>Consent flag</strong> — a single boolean (true/false) recording that you agreed to the CC0 data release during onboarding.</li>
+  </ul>
+  <p>We do not collect your name, email address, phone number, location, device identifiers, or any other personal information.</p>
+
+  <h2>2. The Open Dataset (CC0)</h2>
+  <p>Guess My Doodle's core mission is to build a free, open dataset of human doodles for AI research — similar to Google's Quick, Draw! dataset. Here is how that works:</p>
+  <ul>
+    <li>When enough players correctly identify a drawing (we call this "verified"), the drawing's stroke data and its word label may be included in a public CC0 dataset.</li>
+    <li>The dataset contains only the geometric stroke data and the word. No player identity, device ID, timestamp, or metadata is ever included.</li>
+    <li>You consent to this during onboarding. You can withdraw consent at any time in the app's Settings screen, and no future drawings will be included in the dataset.</li>
+  </ul>
+  <div class="highlight">
+    CC0 means the dataset is released into the public domain — anyone can use it for any purpose, including commercial AI research, without restriction or attribution.
+  </div>
+
+  <h2>3. How Data Is Stored</h2>
+  <p>Currently, all data is stored locally on your device as JSON files in the app's private documents directory. Data is not transmitted to any server in this version of the app.</p>
+  <p>A future update will introduce optional cloud sync via Firebase (Google). When that update is released, this policy will be updated and you will be informed in-app before any data leaves your device.</p>
+
+  <h2>4. Third-Party Services</h2>
+  <p>This version of the app does not integrate any third-party SDKs, analytics tools, advertising networks, or crash-reporting services.</p>
+
+  <h2>5. Children's Privacy</h2>
+  <p>Guess My Doodle is not directed at children under 13. We do not knowingly collect any information from children under 13. If you believe a child under 13 has used the app and provided drawing data, please contact us and we will remove it.</p>
+
+  <h2>6. Data Retention</h2>
+  <p>Your drawings and game stats are stored on your device until you uninstall the app or clear the app's data in Android Settings. Uninstalling the app removes all locally stored data.</p>
+  <p>Once a drawing has been included in a published CC0 dataset release, it cannot be removed from that specific release (as it is public-domain data shared with third parties). However, future dataset releases will not include your drawings if you have withdrawn consent.</p>
+
+  <h2>7. Your Rights</h2>
+  <p>Because we do not collect personal information, there is no personal data to access, correct, or delete through us. To remove all app data, uninstall the app or use Android's "Clear data" option in Settings → Apps → Guess My Doodle.</p>
+  <p>To withdraw CC0 dataset consent: open the app → Settings → Withdraw data consent.</p>
+
+  <h2>8. Changes to This Policy</h2>
+  <p>If we make material changes (for example, when Firebase sync is added), we will update the effective date at the top of this page and notify you inside the app before the change takes effect.</p>
+
+  <h2>9. Contact</h2>
+  <p>Questions or concerns? Reach us at: <a href="mailto:hokhetyen@gmail.com">hokhetyen@gmail.com</a></p>
+
+  <footer>
+    &copy; 2026 TRIPEX &nbsp;·&nbsp; Guess My Doodle: Draw &amp; Guess &nbsp;·&nbsp;
+    <a href="mailto:hokhetyen@gmail.com">hokhetyen@gmail.com</a>
+  </footer>
+
+</div>
+</body>
+</html>
