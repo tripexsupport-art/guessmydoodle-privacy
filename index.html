@@ -1,164 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guess My Doodle – Privacy Policy</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Guess My Doodle · Privacy policy</title><style>body{font:16px/1.6 system-ui,sans-serif;max-width:800px;margin:32px auto;padding:0 20px;color:light-dark(#20262b,#e9edf1);background:light-dark(#fff,#161b20);color-scheme:light dark}h1,h2{line-height:1.2}a{color:light-dark(#075fa8,#89c4ff)}aside{border-left:4px solid currentColor;padding-left:16px}textarea{box-sizing:border-box;width:100%;font:inherit;min-height:90px}</style></head><body>
+<h1>Guess My Doodle · Privacy policy</h1><p>Effective date: 22 October 2026.</p>
 
-    :root {
-      --bg: #ffffff;
-      --surface: #fff7f0;
-      --border: #f0d9c4;
-      --text: #1c1208;
-      --text-muted: #8a6a48;
-      --accent: #c2500a;
-    }
+<p>App: Guess My Doodle: Draw &amp; Guess · Package: <code>com.tripex.guessmydoodle</code> · Developer: TRIPEX / Raven Ho. Contact: <a href="mailto:tripexsupport@gmail.com">tripexsupport@gmail.com</a>.</p>
+<h2>Local practice and optional sharing</h2>
+<p>Your local drawings, labels, practice answers, response times, XP and streak are stored in the app's private storage. Local practice does not create community contribution jobs. Update checks, advertising and purchase services have separate data practices described below.</p>
+<p>In version 0.1.1 and later, community participation requires an explicit choice in Settings. Earlier versions used an onboarding consent choice; update to access the revised local-practice and sharing controls. Firebase Authentication provides an anonymous account identifier that connects contributions and helps the app find your gallery. It is a pseudonymous identifier, not a promise that the service collects no identifying information. No name or email sign-in form is required.</p>
+<p>When participation is enabled, community drawings are sent to Firestore with vector strokes, colors and widths, word/pack labels, creation time, uploader identifier and participation version/time. Community answers include the chosen word, correctness and submission time, linked to the anonymous identifier to measure agreement and prevent duplicate votes. Reports include a reporting identifier, reason and submission time. Old local sketches are uploaded only when you choose Share.</p>
+<h2>Community display and datasets</h2>
+<p>Shared drawings can be displayed to other players and may be included in an open CC0 dataset. CC0 permits reuse, including commercial use. It concerns copyright and does not remove applicable privacy rights. Avoid personal information in shared drawings. See <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.</p>
+<h2>Participation and removal</h2>
+<p>Turning participation off stops new contribution jobs. Work already queued or in flight may finish. Opt-out does not by itself remove previously shared content. Upgrading does not automatically enroll an earlier player into the revised sharing flow.</p>
+<p>Version 0.1.1 and later provides Settings → Remove shared contributions. It uses the existing community session to verify control of that identity, saves the request intent and pauses new contributions on the phone. Offline requests are shown as waiting to send; only server-confirmed requests are shown as received. Removal covers attributable community drawings, answers and reports. Local sketches and progress remain on the device.</p>
+<p>Questions or requests can also be initiated through our <a href="removal.html">removal and support page</a> without reinstalling the app. A public support ID alone is not proof of ownership. If the original session is unavailable, we review what can be verified using proportionate checks. Do not send passwords or authentication tokens.</p>
+<p>We aim to acknowledge privacy requests within 7 days and complete verified requests within 30 days. If a request needs more verification or additional time, we explain what is needed and the expected timing.</p><h2>Storage and retention</h2>
+<p>Shared contributions are stored in Firebase and retained until a verified removal request is fulfilled; there is no automatic shared-contribution expiry. Uninstalling or clearing local storage does not by itself delete server records. We retain minimal restricted request/suppression records needed to prevent removed uploads from being reintroduced and to track request handling. We review developer-controlled copies identified during request handling and exclude accepted removals from future exports and restores. We keep minimal restricted status/suppression records while needed to honor the removal choice and prevent reintroduction; we review their necessity when handling a request. Copies already downloaded by other players or third parties may not be recallable.</p>
+<p>A community removal request does not automatically delete information processed under separate installation, advertising or purchase identifiers, and it does not cancel a Google Play subscription. Contact support for other data requests; provider-specific handling and any legitimate retained records must be explained for the requested scope.</p>
+<h2>Update checks</h2>
+<p>Firebase Remote Config checks supported app versions independently of community participation. Firebase processes installation identifiers and technical information such as country/language codes, time zone, operating-system/platform version and app information. Firebase Authentication also processes IP addresses and technical request information when community sign-in is used. See <a href="https://firebase.google.com/docs/android/play-data-disclosure">Firebase disclosures</a>.</p>
+<h2>Advertising and purchases</h2>
+<p>Google Mobile Ads provides advertising and may process advertising/device identifiers, interactions, diagnostics and IP-derived approximate location. Version 0.1.1 and later checks Google's User Messaging Platform before requesting ads and offers an advertising privacy-options control where Google requires it. The revised app applies protective under-age-of-consent treatment, requests non-personalized ads and limits ad content to a teen rating or below for all users because it does not collect age. Research participation does not control these services. See <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads disclosures</a>.</p>
+<p>RevenueCat and Google Play process Pro purchases, including purchase history and associated identifiers. RevenueCat's generated App User ID is separate from the Firebase community identifier. Changing research preferences or requesting community removal does not cancel a subscription. See <a href="https://www.revenuecat.com/docs/platform-resources/google-platform-resources/google-plays-data-safety">RevenueCat disclosures</a>.</p>
+<h2>Audience, updates and contact</h2>
+<p>The app's declared audience is ages 13 and older. It is not directed to children under 13. If you believe a child has provided personal information, contact support so the request can be reviewed. We update this policy when approved data practices change. Questions and privacy requests: <a href="mailto:tripexsupport@gmail.com">tripexsupport@gmail.com</a>.</p>
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #1a0f06;
-        --surface: #2a1a0d;
-        --border: #3d2510;
-        --text: #fbf0e6;
-        --text-muted: #a07850;
-        --accent: #f97316;
-      }
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--text);
-      background: var(--bg);
-      padding: 2rem 1rem;
-    }
-
-    .container { max-width: 680px; margin: 0 auto; }
-
-    header {
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .app-name {
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: .5px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 6px;
-    }
-
-    h1 { font-size: 1.75rem; font-weight: 800; letter-spacing: -.5px; line-height: 1.2; margin-bottom: 6px; }
-
-    .meta { font-size: 13px; color: var(--text-muted); }
-
-    h2 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin: 2rem 0 .5rem;
-      color: var(--text);
-    }
-
-    p { margin-bottom: 1rem; color: var(--text-muted); font-size: 15px; }
-    p:last-child { margin-bottom: 0; }
-
-    ul {
-      margin: .5rem 0 1rem 1.25rem;
-      color: var(--text-muted);
-      font-size: 15px;
-    }
-    li { margin-bottom: .3rem; }
-
-    .highlight {
-      background: var(--surface);
-      border-left: 3px solid var(--accent);
-      border-radius: 0 8px 8px 0;
-      padding: .75rem 1rem;
-      margin: 1rem 0;
-      font-size: 15px;
-      color: var(--text-muted);
-    }
-
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    footer {
-      margin-top: 3rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-  </style>
-</head>
-<body>
-<div class="container">
-
-  <header>
-    <div class="app-name">Guess My Doodle: Draw &amp; Guess</div>
-    <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: 29 July 2026 &nbsp;·&nbsp; Package: com.tripex.guessmydoodle</p>
-  </header>
-
-  <div class="highlight">
-    The short version: Guess My Doodle does not collect your name, email, phone number, or any other personal information. No account is required to play.
-  </div>
-
-  <h2>1. What We Collect</h2>
-  <p>Guess My Doodle is designed to work without identifying you. The only data the app stores are:</p>
-  <ul>
-    <li><strong>Drawing strokes</strong> — the vector paths you draw on the canvas, stored as normalised coordinates (numbers between 0 and 1). These contain no information about who drew them.</li>
-    <li><strong>Word labels</strong> — the word associated with each drawing.</li>
-    <li><strong>Local game stats</strong> — your XP, level, streak, and guess accuracy, stored on your device only via Android SharedPreferences.</li>
-    <li><strong>Consent flag</strong> — a single boolean (true/false) recording that you agreed to the CC0 data release during onboarding.</li>
-  </ul>
-  <p>We do not collect your name, email address, phone number, location, device identifiers, or any other personal information.</p>
-
-  <h2>2. The Open Dataset (CC0)</h2>
-  <p>Guess My Doodle's core mission is to build a free, open dataset of human doodles for AI research — similar to Google's Quick, Draw! dataset. Here is how that works:</p>
-  <ul>
-    <li>When enough players correctly identify a drawing (we call this "verified"), the drawing's stroke data and its word label may be included in a public CC0 dataset.</li>
-    <li>The dataset contains only the geometric stroke data and the word. No player identity, device ID, timestamp, or metadata is ever included.</li>
-    <li>You consent to this during onboarding. You can withdraw consent at any time in the app's Settings screen, and no future drawings will be included in the dataset.</li>
-  </ul>
-  <div class="highlight">
-    CC0 means the dataset is released into the public domain — anyone can use it for any purpose, including commercial AI research, without restriction or attribution.
-  </div>
-
-  <h2>3. How Data Is Stored</h2>
-  <p>Currently, all data is stored locally on your device as JSON files in the app's private documents directory. Data is not transmitted to any server in this version of the app.</p>
-  <p>A future update will introduce optional cloud sync via Firebase (Google). When that update is released, this policy will be updated and you will be informed in-app before any data leaves your device.</p>
-
-  <h2>4. Third-Party Services</h2>
-  <p>This version of the app does not integrate any third-party SDKs, analytics tools, advertising networks, or crash-reporting services.</p>
-
-  <h2>5. Children's Privacy</h2>
-  <p>Guess My Doodle is not directed at children under 13. We do not knowingly collect any information from children under 13. If you believe a child under 13 has used the app and provided drawing data, please contact us and we will remove it.</p>
-
-  <h2>6. Data Retention</h2>
-  <p>Your drawings and game stats are stored on your device until you uninstall the app or clear the app's data in Android Settings. Uninstalling the app removes all locally stored data.</p>
-  <p>Once a drawing has been included in a published CC0 dataset release, it cannot be removed from that specific release (as it is public-domain data shared with third parties). However, future dataset releases will not include your drawings if you have withdrawn consent.</p>
-
-  <h2>7. Your Rights</h2>
-  <p>Because we do not collect personal information, there is no personal data to access, correct, or delete through us. To remove all app data, uninstall the app or use Android's "Clear data" option in Settings → Apps → Guess My Doodle.</p>
-  <p>To withdraw CC0 dataset consent: open the app → Settings → Withdraw data consent.</p>
-
-  <h2>8. Changes to This Policy</h2>
-  <p>If we make material changes (for example, when Firebase sync is added), we will update the effective date at the top of this page and notify you inside the app before the change takes effect.</p>
-
-  <h2>9. Contact</h2>
-  <p>Questions or concerns? Reach us at: <a href="mailto:hokhetyen@gmail.com">hokhetyen@gmail.com</a></p>
-
-  <footer>
-    &copy; 2026 TRIPEX &nbsp;·&nbsp; Guess My Doodle: Draw &amp; Guess &nbsp;·&nbsp;
-    <a href="mailto:hokhetyen@gmail.com">hokhetyen@gmail.com</a>
-  </footer>
-
-</div>
-</body>
-</html>
+</body></html>
